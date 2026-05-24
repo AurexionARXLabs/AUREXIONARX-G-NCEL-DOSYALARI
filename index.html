@@ -3846,75 +3846,6 @@ footer{
 }
 /* === /MOBİL TAM UYUM === */
 
-
-
-/* =========================================================
-   ARX_ONLY_NAV_LOGO_NAME_FIX
-   Sadece üst menüdeki dönen logo + AUREXION / ARX yazısı.
-   Hero, wheel, kartlar, stats ve scriptlere dokunulmadı.
-========================================================= */
-@media screen and (max-width: 480px){
-  .navbar .nav-brand{
-    display:flex !important;
-    align-items:center !important;
-    gap:6px !important;
-    min-width:0 !important;
-    max-width:118px !important;
-    flex:0 0 118px !important;
-    overflow:visible !important;
-  }
-
-  .navbar .brand-logo{
-    display:block !important;
-    width:32px !important;
-    height:32px !important;
-    min-width:32px !important;
-    object-fit:contain !important;
-    animation:spinLogo 7s linear infinite !important;
-  }
-
-  .navbar .brand-text{
-    display:block !important;
-    font-size:10px !important;
-    line-height:.9 !important;
-    letter-spacing:1.2px !important;
-    white-space:nowrap !important;
-    color:#fff !important;
-    max-width:76px !important;
-    overflow:visible !important;
-  }
-
-  .navbar .brand-text span{
-    display:block !important;
-    font-size:7px !important;
-    line-height:1 !important;
-    letter-spacing:2px !important;
-    margin-top:3px !important;
-    color:#ff355d !important;
-  }
-
-  .navbar .nav-right{
-    gap:4px !important;
-    flex:1 1 auto !important;
-    justify-content:flex-end !important;
-    min-width:0 !important;
-  }
-
-  .navbar .nav-icon{
-    width:28px !important;
-    height:28px !important;
-    min-width:28px !important;
-    font-size:10px !important;
-  }
-
-  .navbar .buy-btn{
-    font-size:10px !important;
-    padding:8px 9px !important;
-    border-radius:9px !important;
-    white-space:nowrap !important;
-  }
-}
-
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -4922,5 +4853,83 @@ footer{
   .wi-name{ font-size: 9px !important; }
 }
 </style>
+
+<style id="ARX_ONLY_TOP_NAV_LOGO_TEXT_FIX">
+/* SADECE ÜST NAV LOGO + AUREXION/ARX YAZISI - BAŞKA BÖLÜME DOKUNMAZ */
+@media screen and (max-width: 480px){
+  .navbar{
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    gap: 6px !important;
+  }
+
+  .nav-brand{
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    min-width: 0 !important;
+    max-width: 98px !important;
+    flex: 0 1 98px !important;
+    overflow: visible !important;
+  }
+
+  .brand-logo{
+    width: 30px !important;
+    height: 30px !important;
+    flex: 0 0 30px !important;
+    animation: spinLogo 7s linear infinite !important;
+    transform-origin: center center !important;
+  }
+
+  .brand-text{
+    display: block !important;
+    max-width: 58px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    font-size: 8.5px !important;
+    line-height: 1 !important;
+    letter-spacing: .7px !important;
+    color: #ffffff !important;
+  }
+
+  .brand-text span{
+    display: block !important;
+    margin-top: 2px !important;
+    font-size: 7px !important;
+    line-height: 1 !important;
+    letter-spacing: 1.2px !important;
+    color: #ff355d !important;
+  }
+
+  .nav-right{
+    gap: 4px !important;
+    flex: 0 0 auto !important;
+  }
+
+  .nav-icon{
+    width: 27px !important;
+    height: 27px !important;
+    font-size: 10px !important;
+  }
+
+  .buy-btn{
+    padding: 8px 10px !important;
+    font-size: 10px !important;
+    letter-spacing: .4px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .brand-logo{
+    animation: spinLogo 7s linear infinite !important;
+  }
+
+  .brand-text{
+    display: block !important;
+  }
+}
+</style>
+
 </body>
 </html>
