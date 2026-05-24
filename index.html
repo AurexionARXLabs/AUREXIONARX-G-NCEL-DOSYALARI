@@ -3781,23 +3781,17 @@ footer{
     width:94% !important;
     gap:18px !important;
   }
-  .cnew-title{ font-size:17px !important; letter-spacing:1px !important; }
-  .cnew-label{ font-size:11px !important; }
-  .cnew-desc{ font-size:10px !important; line-height:1.5 !important; }
-  .cnew-icon{ width:27px !important; height:27px !important; }
-  .cnew-icon .ico-emoji{ font-size:13px !important; }
+  .cnew-title{ font-size:24px !important; }
+  .cnew-label{ font-size:15px !important; }
+  .cnew-desc{ font-size:14px !important; }
+  .cnew-icon{ width:38px !important; height:38px !important; }
+  .cnew-icon .ico-emoji{ font-size:18px !important; }
   .cnew-body{
     flex-direction:column !important;
     align-items:center !important;
   }
-  .cnew-pie{ width:50px !important; height:50px !important; }
-  .cnew-pie::after{ inset:13px !important; }
-  .cnew-card{ padding:18px 14px !important; }
-  .cnew-card h2{ font-size:24px !important; margin-bottom:14px !important; }
-  .cnew-card p{ font-size:13px !important; }
-  #roadmap h2, #tokenomics h2, #community h2{ font-size:24px !important; }
-  #roadmap p, #tokenomics p, #community p{ font-size:13px !important; line-height:1.5 !important; }
-  .info-card{ padding:18px !important; min-height:auto !important; }
+  .cnew-pie{ width:70px !important; height:70px !important; }
+  .cnew-pie::after{ inset:18px !important; }
   .vm-section{ padding:24px 14px !important; }
   .vm-card{ border-radius:18px !important; }
   .vm-inner{
@@ -3851,119 +3845,6 @@ footer{
   .wheel-wrap{ transform:scale(0.7); }
 }
 /* === /MOBİL TAM UYUM === */
-
-/* ============================================ */
-/* === FINAL MOBİL DÜZELTMELER === */
-/* ============================================ */
-
-/* Arka plan mobilde tam ekran kapla */
-@media (max-width:1024px){
-  body::before{
-    background-attachment:scroll !important;
-    background-size:cover !important;
-    background-position:center top !important;
-    background-repeat:no-repeat !important;
-    position:fixed !important;
-    inset:0 !important;
-    width:100% !important;
-    height:100vh !important;
-  }
-  body{
-    background-color:#050816 !important;
-    overflow-x:hidden !important;
-  }
-}
-
-/* Mobil — hero ve wheel arası boşluk + eco-right cardları */
-@media (max-width:768px){
-  .hero-inner{
-    margin-top:60px !important;
-  }
-  .hero{
-    padding-top:30px !important;
-    padding-bottom:0 !important;
-    min-height:auto !important;
-  }
-  .radial89-host{
-    width:190px !important;
-    height:190px !important;
-    top:-40px !important;
-    margin:0 auto !important;
-  }
-  .ecosystem{
-    margin-top:-20px !important;
-    padding:0 14px 30px !important;
-    grid-template-columns:1fr !important;
-    gap:20px !important;
-  }
-  .wheel-wrap{
-    width:min(360px, 92vw) !important;
-    height:auto !important;
-    aspect-ratio:1/1 !important;
-    transform:none !important;
-    margin:0 auto !important;
-  }
-  .eco-right{
-    width:100% !important;
-    max-width:100% !important;
-    grid-template-columns:1fr 1fr !important;
-    gap:10px !important;
-    padding:0 !important;
-  }
-  .value-card{
-    padding:12px 10px !important;
-    min-height:auto !important;
-  }
-  .value-icon{
-    width:32px !important;
-    height:32px !important;
-    font-size:16px !important;
-  }
-  .value-name{ font-size:14px !important; }
-  .value-desc{ font-size:11px !important; line-height:1.35 !important; }
-}
-
-@media (max-width:480px){
-  .hero-inner{
-    margin-top:50px !important;
-  }
-  .radial89-host{
-    width:160px !important;
-    height:160px !important;
-    top:-25px !important;
-  }
-  .wheel-wrap{
-    width:min(320px, 90vw) !important;
-  }
-  .wheel-item{ width:62px !important; height:62px !important; }
-  .wi-name{ font-size:11px !important; }
-  .wi-icon{ font-size:15px !important; }
-}
-
-/* Tabletlerde de navbar yazılarını sıkıştırma */
-@media (min-width:769px) and (max-width:1100px){
-  .nav-links a{
-    font-size:11px !important;
-    letter-spacing:.5px !important;
-  }
-  .nav-links{
-    gap:10px !important;
-  }
-  .brand-text{
-    font-size:18px !important;
-    letter-spacing:2px !important;
-  }
-  .brand-logo{
-    width:42px !important;
-    height:42px !important;
-  }
-  .nav-icon{
-    width:32px !important;
-    height:32px !important;
-    font-size:12px !important;
-  }
-}
-/* === /FINAL MOBİL DÜZELTMELER === */
 
 </style>
 
@@ -4710,5 +4591,205 @@ footer{
     });
   </script>
 </div><!-- /content-scale -->
+<style id="MOBILE_FINAL_OVERRIDE">
+/* ============================================== */
+/* === EN SONDA YÜKLENİR — EN YÜKSEK ÖNCELİK === */
+/* ============================================== */
+
+/* ---- TÜM TABLET VE MOBİL ---- */
+@media screen and (max-width: 1024px){
+  html, body{
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  body::before{
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -3 !important;
+  }
+  body{
+    background-color: #050816 !important;
+  }
+  .ecosystem,
+  section.ecosystem{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 12px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+  .wheel-wrap{
+    width: min(380px, 92vw) !important;
+    height: auto !important;
+    max-width: 92vw !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    grid-column: 1 !important;
+  }
+  .eco-right{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    grid-column: 1 !important;
+  }
+}
+
+/* ---- SADECE MOBİL ---- */
+@media screen and (max-width: 768px){
+  .navbar{
+    padding: 0 10px !important;
+    height: 56px !important;
+    transform: none !important;
+  }
+  .nav-brand{ gap: 6px !important; }
+  .brand-logo{ width: 30px !important; height: 30px !important; }
+  .brand-text{ font-size: 12px !important; letter-spacing: 1.5px !important; }
+  .nav-links{ display: none !important; }
+  .nav-right{ gap: 6px !important; }
+  .nav-icon{ width: 28px !important; height: 28px !important; font-size: 11px !important; }
+  .buy-btn{ font-size: 11px !important; padding: 7px 12px !important; }
+
+  .hero{
+    padding: 70px 14px 10px !important;
+    min-height: auto !important;
+  }
+  .hero-inner{ margin-top: 0 !important; }
+  .hero-title{ font-size: 36px !important; letter-spacing: 2px !important; }
+  .hero-ticker{ font-size: 18px !important; letter-spacing: 5px !important; }
+  .hero-sub{ font-size: 13px !important; letter-spacing: 2px !important; }
+  .hero-desc{ font-size: 14px !important; line-height: 1.5 !important; padding: 0 8px !important; }
+  .hero-btns{ flex-direction: column !important; gap: 10px !important; }
+  .btn-primary, .btn-secondary{ width: 75% !important; font-size: 13px !important; padding: 11px 18px !important; }
+
+  .radial89-host{
+    width: 170px !important;
+    height: 170px !important;
+    top: -20px !important;
+    margin: 10px auto 0 !important;
+  }
+  .orbit-container{
+    width: 170px !important;
+    height: 170px !important;
+    transform: none !important;
+    top: 0 !important;
+    margin: 10px auto !important;
+  }
+
+  .wheel-wrap{
+    width: min(340px, 88vw) !important;
+  }
+  .wheel-item{ width: 58px !important; height: 58px !important; }
+  .wi-icon{ font-size: 14px !important; }
+  .wi-name{ font-size: 10px !important; }
+
+  .value-card{ padding: 12px 10px !important; min-height: auto !important; }
+  .value-icon{ width: 30px !important; height: 30px !important; font-size: 14px !important; }
+  .value-name{ font-size: 13px !important; }
+  .value-desc{ font-size: 10px !important; line-height: 1.35 !important; }
+
+  /* 3 büyük kart %30 küçük */
+  .info-sections{
+    grid-template-columns: 1fr !important;
+    width: 94% !important;
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+  .info-card,
+  .cnew-card{
+    padding: 18px 14px !important;
+    min-height: auto !important;
+  }
+  #roadmap h2,
+  #tokenomics h2,
+  #community h2,
+  .cnew-card h2{
+    font-size: 22px !important;
+    margin-bottom: 12px !important;
+  }
+  #roadmap p,
+  #tokenomics p,
+  #community p,
+  .cnew-card p{
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+  .cnew-title{ font-size: 16px !important; letter-spacing: 1px !important; }
+  .cnew-label{ font-size: 11px !important; }
+  .cnew-desc{ font-size: 10px !important; }
+  .cnew-icon{ width: 26px !important; height: 26px !important; }
+  .cnew-icon .ico-emoji{ font-size: 12px !important; }
+  .cnew-pie{ width: 50px !important; height: 50px !important; }
+  .cnew-pie::after{ inset: 13px !important; }
+
+  .stats-bar{
+    grid-template-columns: 1fr 1fr !important;
+    width: 94% !important;
+    gap: 8px !important;
+  }
+  .stat-value{ font-size: 17px !important; }
+  .stat-label{ font-size: 10px !important; letter-spacing: .6px !important; }
+
+  .vm-card{ border-radius: 16px !important; }
+  .vm-inner{
+    padding: 18px 14px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+  .vm-hex{
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 26px !important;
+    margin: 0 auto !important;
+  }
+  .vm-tag{ font-size: 11px !important; letter-spacing: 1.5px !important; }
+  .vm-title{ font-size: 20px !important; }
+  .vm-desc{ font-size: 13px !important; line-height: 1.55 !important; }
+  .vm-badges{ justify-content: center !important; gap: 6px !important; }
+  .vm-badge{ font-size: 11px !important; padding: 7px 12px !important; }
+
+  footer{
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding: 14px 12px !important;
+  }
+  .footer-copy{ font-size: 11px !important; }
+  .footer-built{ font-size: 10px !important; }
+  .footer-links{ flex-wrap: wrap !important; justify-content: center !important; }
+  .footer-links a{ font-size: 12px !important; padding: 6px 12px !important; }
+}
+
+/* ---- KÜÇÜK MOBİL ---- */
+@media screen and (max-width: 480px){
+  .hero-title{ font-size: 30px !important; }
+  .hero-ticker{ font-size: 16px !important; }
+  .hero-desc{ font-size: 13px !important; }
+  .radial89-host{
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .wheel-wrap{ width: min(300px, 86vw) !important; }
+  .wheel-item{ width: 50px !important; height: 50px !important; }
+  .wi-icon{ font-size: 12px !important; }
+  .wi-name{ font-size: 9px !important; }
+}
+</style>
 </body>
 </html>
