@@ -3846,6 +3846,75 @@ footer{
 }
 /* === /MOBİL TAM UYUM === */
 
+
+
+/* =========================================================
+   ARX_ONLY_NAV_LOGO_NAME_FIX
+   Sadece üst menüdeki dönen logo + AUREXION / ARX yazısı.
+   Hero, wheel, kartlar, stats ve scriptlere dokunulmadı.
+========================================================= */
+@media screen and (max-width: 480px){
+  .navbar .nav-brand{
+    display:flex !important;
+    align-items:center !important;
+    gap:6px !important;
+    min-width:0 !important;
+    max-width:118px !important;
+    flex:0 0 118px !important;
+    overflow:visible !important;
+  }
+
+  .navbar .brand-logo{
+    display:block !important;
+    width:32px !important;
+    height:32px !important;
+    min-width:32px !important;
+    object-fit:contain !important;
+    animation:spinLogo 7s linear infinite !important;
+  }
+
+  .navbar .brand-text{
+    display:block !important;
+    font-size:10px !important;
+    line-height:.9 !important;
+    letter-spacing:1.2px !important;
+    white-space:nowrap !important;
+    color:#fff !important;
+    max-width:76px !important;
+    overflow:visible !important;
+  }
+
+  .navbar .brand-text span{
+    display:block !important;
+    font-size:7px !important;
+    line-height:1 !important;
+    letter-spacing:2px !important;
+    margin-top:3px !important;
+    color:#ff355d !important;
+  }
+
+  .navbar .nav-right{
+    gap:4px !important;
+    flex:1 1 auto !important;
+    justify-content:flex-end !important;
+    min-width:0 !important;
+  }
+
+  .navbar .nav-icon{
+    width:28px !important;
+    height:28px !important;
+    min-width:28px !important;
+    font-size:10px !important;
+  }
+
+  .navbar .buy-btn{
+    font-size:10px !important;
+    padding:8px 9px !important;
+    border-radius:9px !important;
+    white-space:nowrap !important;
+  }
+}
+
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -4853,6 +4922,5 @@ footer{
   .wi-name{ font-size: 9px !important; }
 }
 </style>
-
 </body>
 </html>
