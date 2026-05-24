@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -3781,17 +3781,23 @@ footer{
     width:94% !important;
     gap:18px !important;
   }
-  .cnew-title{ font-size:24px !important; }
-  .cnew-label{ font-size:15px !important; }
-  .cnew-desc{ font-size:14px !important; }
-  .cnew-icon{ width:38px !important; height:38px !important; }
-  .cnew-icon .ico-emoji{ font-size:18px !important; }
+  .cnew-title{ font-size:17px !important; letter-spacing:1px !important; }
+  .cnew-label{ font-size:11px !important; }
+  .cnew-desc{ font-size:10px !important; line-height:1.5 !important; }
+  .cnew-icon{ width:27px !important; height:27px !important; }
+  .cnew-icon .ico-emoji{ font-size:13px !important; }
   .cnew-body{
     flex-direction:column !important;
     align-items:center !important;
   }
-  .cnew-pie{ width:70px !important; height:70px !important; }
-  .cnew-pie::after{ inset:18px !important; }
+  .cnew-pie{ width:50px !important; height:50px !important; }
+  .cnew-pie::after{ inset:13px !important; }
+  .cnew-card{ padding:18px 14px !important; }
+  .cnew-card h2{ font-size:24px !important; margin-bottom:14px !important; }
+  .cnew-card p{ font-size:13px !important; }
+  #roadmap h2, #tokenomics h2, #community h2{ font-size:24px !important; }
+  #roadmap p, #tokenomics p, #community p{ font-size:13px !important; line-height:1.5 !important; }
+  .info-card{ padding:18px !important; min-height:auto !important; }
   .vm-section{ padding:24px 14px !important; }
   .vm-card{ border-radius:18px !important; }
   .vm-inner{
@@ -3845,6 +3851,119 @@ footer{
   .wheel-wrap{ transform:scale(0.7); }
 }
 /* === /MOBİL TAM UYUM === */
+
+/* ============================================ */
+/* === FINAL MOBİL DÜZELTMELER === */
+/* ============================================ */
+
+/* Arka plan mobilde tam ekran kapla */
+@media (max-width:1024px){
+  body::before{
+    background-attachment:scroll !important;
+    background-size:cover !important;
+    background-position:center top !important;
+    background-repeat:no-repeat !important;
+    position:fixed !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100vh !important;
+  }
+  body{
+    background-color:#050816 !important;
+    overflow-x:hidden !important;
+  }
+}
+
+/* Mobil — hero ve wheel arası boşluk + eco-right cardları */
+@media (max-width:768px){
+  .hero-inner{
+    margin-top:60px !important;
+  }
+  .hero{
+    padding-top:30px !important;
+    padding-bottom:0 !important;
+    min-height:auto !important;
+  }
+  .radial89-host{
+    width:190px !important;
+    height:190px !important;
+    top:-40px !important;
+    margin:0 auto !important;
+  }
+  .ecosystem{
+    margin-top:-20px !important;
+    padding:0 14px 30px !important;
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+  }
+  .wheel-wrap{
+    width:min(360px, 92vw) !important;
+    height:auto !important;
+    aspect-ratio:1/1 !important;
+    transform:none !important;
+    margin:0 auto !important;
+  }
+  .eco-right{
+    width:100% !important;
+    max-width:100% !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    padding:0 !important;
+  }
+  .value-card{
+    padding:12px 10px !important;
+    min-height:auto !important;
+  }
+  .value-icon{
+    width:32px !important;
+    height:32px !important;
+    font-size:16px !important;
+  }
+  .value-name{ font-size:14px !important; }
+  .value-desc{ font-size:11px !important; line-height:1.35 !important; }
+}
+
+@media (max-width:480px){
+  .hero-inner{
+    margin-top:50px !important;
+  }
+  .radial89-host{
+    width:160px !important;
+    height:160px !important;
+    top:-25px !important;
+  }
+  .wheel-wrap{
+    width:min(320px, 90vw) !important;
+  }
+  .wheel-item{ width:62px !important; height:62px !important; }
+  .wi-name{ font-size:11px !important; }
+  .wi-icon{ font-size:15px !important; }
+}
+
+/* Tabletlerde de navbar yazılarını sıkıştırma */
+@media (min-width:769px) and (max-width:1100px){
+  .nav-links a{
+    font-size:11px !important;
+    letter-spacing:.5px !important;
+  }
+  .nav-links{
+    gap:10px !important;
+  }
+  .brand-text{
+    font-size:18px !important;
+    letter-spacing:2px !important;
+  }
+  .brand-logo{
+    width:42px !important;
+    height:42px !important;
+  }
+  .nav-icon{
+    width:32px !important;
+    height:32px !important;
+    font-size:12px !important;
+  }
+}
+/* === /FINAL MOBİL DÜZELTMELER === */
 
 </style>
 
