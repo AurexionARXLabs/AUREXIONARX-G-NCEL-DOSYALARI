@@ -5491,6 +5491,72 @@ footer{
 </style>
 
 <style id="ARX_ONLY_4_VALUE_CARDS_SHRINK">
+/* SADECE PC (mobil dokunulmaz) - tüm kutular %25 küçük */
+@media screen and (min-width: 769px){
+  /* 4 değer kartı - büyütüldü, sağa doğru genişledi */
+  body .eco-right,
+  html body .eco-right{
+    zoom: 0.95;
+    min-width: 480px !important;
+    max-width: 560px !important;
+  }
+  /* Stats bar */
+  body .stats-bar,
+  html body .stats-bar{
+    zoom: 0.75;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  /* 3 büyük kart */
+  body .info-sections,
+  html body .info-sections{
+    zoom: 0.75;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  /* Vision / Mission - sadece genişlik artırıldı */
+  body .vm-section,
+  html body .vm-section{
+    zoom: 0.9;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 32px !important;
+    max-width: 1700px !important;
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body .vm-card,
+  html body .vm-card{
+    max-width: 1600px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* Footer üst boşluk */
+  body footer,
+  html body footer{
+    margin-top: 0 !important;
+  }
+}
+
+/* TÜM CİHAZLAR - 3 KART VIZYON/MİSYON GİBİ ŞEFFAF (mobil + PC) */
+body .cnew-red,
+html body .cnew-red,
+body .cnew-purple,
+html body .cnew-purple,
+body .cnew-cyan,
+html body .cnew-cyan{
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+body .cnew-bg-overlay,
+html body .cnew-bg-overlay{
+  background: transparent !important;
+  display: none !important;
+}
+
 /* SADECE 4 KUTU (GÜVEN/İNOVASYON/LİDERLİK/TOPLULUK) - %18 küçük */
 @media screen and (max-width: 768px){
   .eco-right .value-card{
@@ -5541,6 +5607,23 @@ footer{
     max-width: 82vw !important;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  /* 3 KART - VİZYON/MİSYON GİBİ ŞEFFAF YAP */
+  body .cnew-red,
+  html body .cnew-red,
+  body .cnew-purple,
+  html body .cnew-purple,
+  body .cnew-cyan,
+  html body .cnew-cyan{
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  body .cnew-bg-overlay,
+  html body .cnew-bg-overlay{
+    background: transparent !important;
+    display: none !important;
   }
   body .info-sections,
   html body .info-sections{
