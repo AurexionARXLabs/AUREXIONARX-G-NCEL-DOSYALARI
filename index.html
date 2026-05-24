@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -1525,8 +1525,8 @@ drop-shadow(0 0 55px rgba(0,229,255,.18));
   border-color:rgba(189,56,255,.50) !important;
 }
 #tokenomics.info-card::before{
-  content:"◔";
-  color:#bd38ff;
+  content:"";
+  display:none;
 }
 
 #community.info-card{
@@ -1754,23 +1754,18 @@ drop-shadow(0 0 55px rgba(0,229,255,.18));
   width:80px;
   height:80px;
   border-radius:50%;
-  background:conic-gradient(
-    rgba(177,69,255,.95)  0%   40%,
-    rgba(130,50,230,.80)  40%  62%,
-    rgba(90,30,170,.70)   62%  78%,
-    rgba(55,15,110,.85)   78% 100%
-  );
-  box-shadow:
-    0 0 20px rgba(177,69,255,.45),
-    0 0 6px rgba(177,69,255,.30);
+  background:transparent;
+  box-shadow:none;
   position:relative;
+  opacity:0;
+  visibility:hidden;
 }
 .cnew-pie::after{
   content:'';
-  position:absolute;
-  inset:22px;
-  border-radius:50%;
-  background:rgba(12,6,28,.92);
+  display:none;
+}
+.cnew-pie-wrap{
+  display:none !important;
 }
 
 /* === CYAN KART === */
@@ -3873,11 +3868,11 @@ footer{
     </a>
 
     <div class="nav-links">
-      <a href="#home">Ana Sayfa</a>
+      <a href="#home">Home</a>
       <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Yol Haritası</a>
-      <a href="#ecosystem">Ekosistem</a>
-      <a href="#community">Topluluk</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#community">Community</a>
     </div>
 
     <div class="nav-right">
@@ -3885,7 +3880,7 @@ footer{
       <a class="nav-icon" href="https://x.com/AurexionARX" target="_blank">𝕏</a>
       <a class="nav-icon" href="javascript:void(0)">◈</a>
       <a href="https://pump.fun/coin/Hq6cJZpLJQymfafR4TYf1NHeiZCoup7zzczVUZbRpump" target="_blank">
-        <button class="buy-btn">ARX SATIN AL</button>
+        <button class="buy-btn">BUY ARX</button>
       </a>
     </div>
   </nav>
@@ -4200,14 +4195,14 @@ footer{
 
 <h1 class="hero-title notranslate" translate="no">AUREXION</h1>
       <div class="hero-ticker">ARX</div>
-      <p class="hero-sub">GELECEĞİ BİRLİKTE İNŞA EDİYORUZ</p>
+      <p class="hero-sub">BUILDING THE FUTURE TOGETHER</p>
       <p class="hero-desc">
-        Teknoloji, topluluk ve inovasyon ile merkeziyetsiz dünyanın geleceği için yola çıktık.
+        We set out for the future of a decentralized world through technology, community, and innovation.
       </p>
 
       <div class="hero-btns">
-        <a class="btn-primary" href="#ecosystem">Ekosistemi Keşfet →</a>
-        <a class="btn-secondary" href="#community">🌐 Topluluk</a>
+        <a class="btn-primary" href="#ecosystem">Explore Ecosystem →</a>
+        <a class="btn-secondary" href="#community">🌐 Community</a>
       </div>
     </div>
   </section>
@@ -4289,32 +4284,32 @@ footer{
       <div class="value-card">
         <div class="value-icon">💎</div>
         <div>
-          <div class="value-name">Güven</div>
-          <div class="value-desc">Güçlü altyapı ile güven inşa ederiz.</div>
+          <div class="value-name">Trust</div>
+          <div class="value-desc">We build trust through strong infrastructure.</div>
         </div>
       </div>
 
       <div class="value-card">
         <div class="value-icon">🚀</div>
         <div>
-          <div class="value-name">İnovasyon</div>
-          <div class="value-desc">Teknolojiyle geleceği şekillendiriyoruz.</div>
+          <div class="value-name">Innovation</div>
+          <div class="value-desc">Shaping the future with technology.</div>
         </div>
       </div>
 
       <div class="value-card">
         <div class="value-icon">👑</div>
         <div>
-          <div class="value-name">Liderlik</div>
-          <div class="value-desc">Vizyoner adımlar, güçlü ekip.</div>
+          <div class="value-name">Leadership</div>
+          <div class="value-desc">Visionary steps, strong team.</div>
         </div>
       </div>
 
       <div class="value-card">
         <div class="value-icon">🌐</div>
         <div>
-          <div class="value-name">Topluluk</div>
-          <div class="value-desc">Birlikte daha güçlüyüz.</div>
+          <div class="value-name">Community</div>
+          <div class="value-desc">Together we are stronger.</div>
         </div>
       </div>
     </div>
@@ -4325,7 +4320,7 @@ footer{
       <div class="stat-icon">🪙</div>
       <div>
         <div class="stat-value" id="price">$0.00000238</div>
-        <div class="stat-label">Fiyat</div>
+        <div class="stat-label">Price</div>
       </div>
     </div>
 
@@ -4333,7 +4328,7 @@ footer{
       <div class="stat-icon">📊</div>
       <div>
         <div class="stat-value" id="marketcap">$2,517.06</div>
-        <div class="stat-label">Piyasa Değeri</div>
+        <div class="stat-label">Market Cap</div>
       </div>
     </div>
 
@@ -4341,7 +4336,7 @@ footer{
       <div class="stat-icon">📈</div>
       <div>
         <div class="stat-value" id="volume">$82.85</div>
-        <div class="stat-label">24 Saatlik Hacim</div>
+        <div class="stat-label">24h Volume</div>
       </div>
     </div>
 
@@ -4349,7 +4344,7 @@ footer{
       <div class="stat-icon">💧</div>
       <div>
         <div class="stat-value" id="liquidity">$0</div>
-        <div class="stat-label">Likidite</div>
+        <div class="stat-label">Liquidity</div>
       </div>
     </div>
   </div>
@@ -4359,34 +4354,34 @@ footer{
     <div id="roadmap" class="info-card cnew-card cnew-red">
       <div class="cnew-bg-overlay"></div>
       <div class="cnew-content">
-        <h2 class="cnew-title">YOL HARİTASI</h2>
+        <h2 class="cnew-title">ROADMAP</h2>
         <ul class="cnew-list">
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">✓</span></div>
             <div class="cnew-text">
-              <p class="cnew-label">Aşama 1 –</p>
-              <p class="cnew-desc">Markalaşma ve Topluluk Lansmanı</p>
+              <p class="cnew-label">Phase 1 –</p>
+              <p class="cnew-desc">Branding & Community Launch</p>
             </div>
           </li>
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">🚀</span></div>
             <div class="cnew-text">
-              <p class="cnew-label">Aşama 2 –</p>
-              <p class="cnew-desc">Solana'da Token Lansmanı</p>
+              <p class="cnew-label">Phase 2 –</p>
+              <p class="cnew-desc">Token Launch on Solana</p>
             </div>
           </li>
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">🔥</span></div>
             <div class="cnew-text">
-              <p class="cnew-label">Aşama 3 –</p>
-              <p class="cnew-desc">Dex Listelemesi ve Pazarlama Çalışmaları</p>
+              <p class="cnew-label">Phase 3 –</p>
+              <p class="cnew-desc">DEX Listing & Marketing Campaigns</p>
             </div>
           </li>
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">🌍</span></div>
             <div class="cnew-text">
-              <p class="cnew-label">Aşama 4 –</p>
-              <p class="cnew-desc">Küresel Ekosistem Genişlemesi</p>
+              <p class="cnew-label">Phase 4 –</p>
+              <p class="cnew-desc">Global Ecosystem Expansion</p>
             </div>
           </li>
         </ul>
@@ -4397,35 +4392,35 @@ footer{
     <div id="tokenomics" class="info-card cnew-card cnew-purple">
       <div class="cnew-bg-overlay"></div>
       <div class="cnew-content">
-        <h2 class="cnew-title">TOKEN EKONOMİSİ</h2>
+        <h2 class="cnew-title">TOKENOMICS</h2>
         <div class="cnew-body">
           <ul class="cnew-list cnew-list-tight">
             <li class="cnew-row">
               <div class="cnew-icon"><span class="ico-emoji">🪙</span></div>
               <div class="cnew-text">
-                <p class="cnew-label">Toplam Arz:</p>
-                <p class="cnew-desc">1.000.000.000 ARX</p>
+                <p class="cnew-label">Total Supply:</p>
+                <p class="cnew-desc">1,000,000,000 ARX</p>
               </div>
             </li>
             <li class="cnew-row">
               <div class="cnew-icon"><span class="ico-emoji">⛓</span></div>
               <div class="cnew-text">
-                <p class="cnew-label">Ağ:</p>
+                <p class="cnew-label">Network:</p>
                 <p class="cnew-desc">Solana</p>
               </div>
             </li>
             <li class="cnew-row">
               <div class="cnew-icon"><span class="ico-emoji">🔒</span></div>
               <div class="cnew-text">
-                <p class="cnew-label">Basılabilir:</p>
-                <p class="cnew-desc">Hayır – Sabit arz, sonsuz dek 1 milyar ARX</p>
+                <p class="cnew-label">Mintable:</p>
+                <p class="cnew-desc">No – Fixed supply, forever 1 billion ARX</p>
               </div>
             </li>
             <li class="cnew-row">
               <div class="cnew-icon"><span class="ico-emoji">🎯</span></div>
               <div class="cnew-text">
-                <p class="cnew-label">Odak Noktası:</p>
-                <p class="cnew-desc">Topluluk • Fayda • Uzun Vadeli Büyüme</p>
+                <p class="cnew-label">Focus:</p>
+                <p class="cnew-desc">Community • Utility • Long-Term Growth</p>
               </div>
             </li>
           </ul>
@@ -4440,13 +4435,13 @@ footer{
     <div id="community" class="info-card cnew-card cnew-cyan">
       <div class="cnew-bg-overlay"></div>
       <div class="cnew-content">
-        <h2 class="cnew-title">TOPLULUK</h2>
+        <h2 class="cnew-title">COMMUNITY</h2>
         <ul class="cnew-list">
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">👥</span></div>
             <div class="cnew-text">
               <p class="cnew-label">Telegram • X • Discord</p>
-              <p class="cnew-desc">Çok Yakında 🚀</p>
+              <p class="cnew-desc">Coming Soon 🚀</p>
             </div>
           </li>
           <li class="cnew-row">
@@ -4458,7 +4453,7 @@ footer{
           </li>
         </ul>
         <button class="cnew-copy-btn" onclick="copyCA()">
-          <span class="ico-emoji">📋</span> KOPYALA
+          <span class="ico-emoji">📋</span> COPY
         </button>
         <span id="copy-status" class="copy-status"></span>
       </div>
@@ -4479,8 +4474,8 @@ footer{
 .v .vm-topbar{background:linear-gradient(90deg,#ff355d,#bd38ff,#ff80f4,#bd38ff,#ff355d);background-size:200%;animation:vmshift 3s linear infinite;}
 .m .vm-topbar{background:linear-gradient(90deg,#00eaff,#3177ff,#00ffc8,#3177ff,#00eaff);background-size:200%;animation:vmshift 3s linear infinite;}
 @keyframes vmshift{0%{background-position:0%}100%{background-position:200%}}
-.vm-inner{padding:32px 36px 28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;}
-.vm-hex{width:108px;height:108px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:52px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);}
+.vm-inner{padding:32px 36px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;}
+.vm-hex{width:108px;height:108px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:52px;clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);margin:0 auto;}
 .v .vm-hex{background:linear-gradient(135deg,rgba(189,56,255,.5),rgba(255,53,93,.3),rgba(189,56,255,.6));box-shadow:0 0 30px rgba(189,56,255,.6);}
 .m .vm-hex{background:linear-gradient(135deg,rgba(0,234,255,.5),rgba(49,119,255,.3),rgba(0,234,255,.6));box-shadow:0 0 30px rgba(0,234,255,.6);}
 .vm-tag{display:inline-flex;align-items:center;gap:8px;font-size:18px;letter-spacing:4px;text-transform:uppercase;font-weight:900;margin-bottom:12px;padding:5px 16px;border-radius:20px;}
@@ -4490,7 +4485,7 @@ footer{
 .v .vm-title{background:linear-gradient(90deg,#ffffff 0%,#e580ff 40%,#ff355d 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 16px rgba(189,56,255,.7));}
 .m .vm-title{background:linear-gradient(90deg,#ffffff 0%,#44ffe0 40%,#3177ff 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 16px rgba(0,234,255,.7));}
 .vm-desc{font-size:24px;color:rgba(235,225,255,.92);line-height:1.9;margin-bottom:24px;font-weight:600;}.vm-desc strong{font-weight:900;color:#fff;}
-.vm-badges{display:flex;flex-wrap:wrap;gap:14px;}
+.vm-badges{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
 .vm-badge{font-size:22px;letter-spacing:1.5px;padding:16px 32px;border-radius:24px;font-weight:800;text-transform:none;transition:transform .2s;}
 .vm-badge:hover{transform:scale(1.08);}
 .v .vm-badge:nth-child(1){background:rgba(8,2,12,.85);border:2px solid #ff355d;color:#fff;box-shadow:0 0 16px rgba(255,53,93,.55),inset 0 0 12px rgba(255,53,93,.15);text-shadow:0 0 8px rgba(255,53,93,.8);}
@@ -4512,16 +4507,17 @@ footer{
     <div class="vm-inner">
       <div class="vm-hex">🔭</div>
       <div>
-        <div class="vm-tag">✦ VİZYON ✦</div>
-        <div class="vm-title">Evrensel Çok Zincirli Ekosistem</div>
-        <div class="vm-desc"><strong>ARX</strong>, yalnızca bir token değil — Solana'dan başlayarak <strong>Ethereum ve Bitcoin</strong>'e köprülenen, dijital varlık ticaretinden oyun ekonomisine, NFT'den DeFi'ye <strong>her alanda</strong> kullanılabilen çok zincirli evrensel bir ekosistem olmak için yola çıktı. Sınır tanımayan bir geleceği birlikte inşa ediyoruz.</div>
+        <div class="vm-tag">✦ VISION ✦</div>
+        <div class="vm-title">Universal Multi-Chain Vision</div>
+        <div class="vm-desc"><strong>ARX</strong> is a project that begins on <strong>Solana</strong> and aims to evolve into a multi-chain <strong>Web3</strong> ecosystem in the future.<br>
+<strong>ETH integration</strong>, a <strong>BTC bridge</strong>, <strong>NFT</strong> features, game economy, and <strong>DeFi</strong> utilities are part of our roadmap.</div>
         <div class="vm-badges">
-          <span class="vm-badge">⚡ Çok Zincirli</span>
-          <span class="vm-badge">◈ NFT Marketplace</span>
-          <span class="vm-badge">⚔ Oyun Ekonomisi</span>
-          <span class="vm-badge">◎ DeFi Protokolü</span>
-          <span class="vm-badge">⇌ ETH Köprüsü</span>
-          <span class="vm-badge">₿ BTC Köprüsü</span>
+          <span class="vm-badge">⚡ Multi-Chain Vision</span>
+          <span class="vm-badge">◇ NFT Marketplace</span>
+          <span class="vm-badge">⚔ Game Economy</span>
+          <span class="vm-badge">◎ DeFi Roadmap</span>
+          <span class="vm-badge">Ξ ETH Integration Plan</span>
+          <span class="vm-badge">₿ BTC Bridge Plan</span>
         </div>
       </div>
     </div>
@@ -4532,16 +4528,17 @@ footer{
     <div class="vm-inner">
       <div class="vm-hex">🚀</div>
       <div>
-        <div class="vm-tag">✦ MİSYON ✦</div>
-        <div class="vm-title">Solana'dan Başlayan, Dünyaya Yayılan Platform</div>
-        <div class="vm-desc"><strong>Topluluk odaklı</strong> ve şeffaf bir yapıyla; önce Solana ekosisteminde sağlam bir temel kuruyor, ardından <strong>Ethereum ve Bitcoin</strong> altyapılarıyla entegrasyon sağlıyoruz. Oyun içi varlık ticareti, <strong>NFT marketplace</strong> ve çok zincirli DeFi hizmetleriyle büyüyen topluluğumuza <strong>gerçek değer</strong> yaratıyoruz.</div>
+        <div class="vm-tag">✦ MISSION ✦</div>
+        <div class="vm-title">Starting from Solana, Building Toward the World</div>
+        <div class="vm-desc"><strong>AUREXION</strong> begins on <strong>Solana</strong> with a community-driven and transparent foundation.<br>
+<strong>ARX</strong> aims to grow step by step through secure infrastructure, open communication, and strong community support.</div>
         <div class="vm-badges">
-          <span class="vm-badge">◎ Solana Temeli</span>
-          <span class="vm-badge">⬡ Ethereum Entegrasyon</span>
-          <span class="vm-badge">₿ Bitcoin Köprüsü</span>
-          <span class="vm-badge">🏪 NFT Marketplace</span>
-          <span class="vm-badge">🛡 Güvenli Altyapı</span>
-          <span class="vm-badge">🌐 Global Vizyon</span>
+          <span class="vm-badge">◎ Solana Based</span>
+          <span class="vm-badge">◇ Community Driven</span>
+          <span class="vm-badge">◈ Transparent Structure</span>
+          <span class="vm-badge">▣ Secure Infrastructure</span>
+          <span class="vm-badge">✦ Long-Term Development</span>
+          <span class="vm-badge">🌐 Global Vision</span>
         </div>
       </div>
     </div>
@@ -5341,14 +5338,14 @@ footer{
 
   .btn-primary,
   .btn-secondary{
-    width:220px !important;
-    max-width:calc(100vw - 72px) !important;
+    width:auto !important;
+    max-width:200px !important;
     min-width:0 !important;
-    min-height:48px !important;
-    padding:11px 14px !important;
-    font-size:14px !important;
+    min-height:40px !important;
+    padding:9px 18px !important;
+    font-size:12px !important;
     line-height:1.15 !important;
-    border-radius:13px !important;
+    border-radius:11px !important;
   }
 
   /* ECOSYSTEM: Solana yuvarlağı kesilmesin */
@@ -5361,8 +5358,8 @@ footer{
   }
 
   .wheel-wrap{
-    width:min(390px, 90vw) !important;
-    max-width:90vw !important;
+    width:min(320px, 76vw) !important;
+    max-width:76vw !important;
     height:auto !important;
     aspect-ratio:1 / 1 !important;
     margin:0 auto !important;
@@ -5472,23 +5469,107 @@ footer{
   .hero-desc{ font-size:11.5px !important; }
 
   .wheel-wrap{
-    width:min(370px, 91vw) !important;
-    max-width:91vw !important;
+    width:min(305px, 77vw) !important;
+    max-width:77vw !important;
   }
 
   .wheel-item{
-    width:58px !important;
-    height:58px !important;
+    width:48px !important;
+    height:48px !important;
   }
 
   .wheel-center{
-    width:112px !important;
-    height:112px !important;
+    width:92px !important;
+    height:92px !important;
   }
 
   .wheel-center img{
-    width:145px !important;
-    height:145px !important;
+    width:120px !important;
+    height:120px !important;
+  }
+}
+</style>
+
+<style id="ARX_ONLY_4_VALUE_CARDS_SHRINK">
+/* SADECE 4 KUTU (GÜVEN/İNOVASYON/LİDERLİK/TOPLULUK) - %18 küçük */
+@media screen and (max-width: 768px){
+  .eco-right .value-card{
+    transform: scale(0.82) !important;
+    transform-origin: center center !important;
+  }
+  .eco-right{
+    gap: 2px !important;
+  }
+
+  /* SADECE STATS KUTUSU - direkt boyut küçültme (%18) */
+  body .stats-bar,
+  html body .stats-bar{
+    width: min(460px, calc((100vw - 28px) * 0.82)) !important;
+    max-width: 82vw !important;
+    margin: 16px auto !important;
+  }
+  body .stats-bar .stat-item,
+  html body .stats-bar .stat-item{
+    min-height: 67px !important;
+    padding: 11px 8px !important;
+    gap: 7px !important;
+  }
+  body .stats-bar .stat-item .stat-icon,
+  html body .stats-bar .stat-item .stat-icon{
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 13px !important;
+  }
+  body .stats-bar .stat-item .stat-value,
+  html body .stats-bar .stat-item .stat-value{
+    font-size: 16px !important;
+    line-height: 1 !important;
+  }
+  body .stats-bar .stat-item .stat-label,
+  html body .stats-bar .stat-item .stat-label{
+    font-size: 8.5px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* 3 BÜYÜK KART (Yol Haritası / Token Ekonomisi / Topluluk) - 4 kutu genişliğiyle aynı */
+  body #roadmap,
+  body #tokenomics,
+  body #community,
+  html body .info-card,
+  html body .cnew-card{
+    width: min(460px, calc((100vw - 28px) * 0.82)) !important;
+    max-width: 82vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body .info-sections,
+  html body .info-sections{
+    width: 100% !important;
+    max-width: 100vw !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+  }
+
+  /* VİZYON / MİSYON kartları - 4 kutu genişliğiyle aynı */
+  body .vm-card,
+  html body .vm-card{
+    width: min(460px, calc((100vw - 28px) * 0.82)) !important;
+    max-width: 82vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  body .vm-section,
+  html body .vm-section{
+    align-items: center !important;
+  }
+
+  /* FOOTER - 4 kutu genişliğiyle aynı */
+  body footer,
+  html body footer{
+    width: min(460px, calc((100vw - 28px) * 0.82)) !important;
+    max-width: 82vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 </style>
