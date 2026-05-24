@@ -4652,21 +4652,61 @@ footer{
 
 /* ---- SADECE MOBİL ---- */
 @media screen and (max-width: 768px){
+  /* NAVBAR — TEK SATIR, ÜST ÜSTE BİNMESİN */
   .navbar{
+    height: 60px !important;
     padding: 0 10px !important;
-    height: 56px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     transform: none !important;
   }
-  .nav-brand{ gap: 6px !important; }
-  .brand-logo{ width: 30px !important; height: 30px !important; }
-  .brand-text{ font-size: 12px !important; letter-spacing: 1.5px !important; }
+  .nav-brand{
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    gap: 6px !important;
+  }
+  .brand-logo{
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .brand-text{
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    color: #fff !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+  }
+  .brand-text span{
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    margin-top: 2px !important;
+    color: #ff355d !important;
+  }
   .nav-links{ display: none !important; }
-  .nav-right{ gap: 6px !important; }
-  .nav-icon{ width: 28px !important; height: 28px !important; font-size: 11px !important; }
-  .buy-btn{ font-size: 11px !important; padding: 7px 12px !important; }
+  .nav-right{
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    gap: 5px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .nav-icon{
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 11px !important;
+  }
+  .buy-btn{
+    font-size: 11px !important;
+    padding: 8px 12px !important;
+    white-space: nowrap !important;
+  }
 
+  /* HERO */
   .hero{
-    padding: 70px 14px 10px !important;
+    padding: 80px 14px 10px !important;
     min-height: auto !important;
   }
   .hero-inner{ margin-top: 0 !important; }
@@ -4674,23 +4714,37 @@ footer{
   .hero-ticker{ font-size: 18px !important; letter-spacing: 5px !important; }
   .hero-sub{ font-size: 13px !important; letter-spacing: 2px !important; }
   .hero-desc{ font-size: 14px !important; line-height: 1.5 !important; padding: 0 8px !important; }
-  .hero-btns{ flex-direction: column !important; gap: 10px !important; }
-  .btn-primary, .btn-secondary{ width: 75% !important; font-size: 13px !important; padding: 11px 18px !important; }
+  .hero-btns{
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin-top: 20px !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+  .btn-primary, .btn-secondary{
+    width: 75% !important;
+    font-size: 13px !important;
+    padding: 11px 18px !important;
+  }
 
+  /* RADIAL/ORBIT — HERO ALTINA NORMAL POZİSYONDA */
   .radial89-host{
-    width: 170px !important;
-    height: 170px !important;
-    top: -20px !important;
-    margin: 10px auto 0 !important;
+    width: 160px !important;
+    height: 160px !important;
+    top: 0 !important;
+    position: relative !important;
+    margin: 20px auto 0 !important;
   }
   .orbit-container{
-    width: 170px !important;
-    height: 170px !important;
-    transform: none !important;
+    width: 160px !important;
+    height: 160px !important;
     top: 0 !important;
-    margin: 10px auto !important;
+    position: relative !important;
+    margin: 20px auto 0 !important;
+    transform: none !important;
   }
 
+  /* WHEEL */
   .wheel-wrap{
     width: min(340px, 88vw) !important;
   }
@@ -4698,12 +4752,13 @@ footer{
   .wi-icon{ font-size: 14px !important; }
   .wi-name{ font-size: 10px !important; }
 
+  /* VALUE CARDS (4 küçük kart) */
   .value-card{ padding: 12px 10px !important; min-height: auto !important; }
   .value-icon{ width: 30px !important; height: 30px !important; font-size: 14px !important; }
   .value-name{ font-size: 13px !important; }
   .value-desc{ font-size: 10px !important; line-height: 1.35 !important; }
 
-  /* 3 büyük kart %30 küçük */
+  /* 3 BÜYÜK KART — %30 küçük */
   .info-sections{
     grid-template-columns: 1fr !important;
     width: 94% !important;
@@ -4737,6 +4792,7 @@ footer{
   .cnew-pie{ width: 50px !important; height: 50px !important; }
   .cnew-pie::after{ inset: 13px !important; }
 
+  /* STATS BAR */
   .stats-bar{
     grid-template-columns: 1fr 1fr !important;
     width: 94% !important;
@@ -4745,6 +4801,7 @@ footer{
   .stat-value{ font-size: 17px !important; }
   .stat-label{ font-size: 10px !important; letter-spacing: .6px !important; }
 
+  /* VISION/MISSION */
   .vm-card{ border-radius: 16px !important; }
   .vm-inner{
     padding: 18px 14px !important;
@@ -4764,6 +4821,7 @@ footer{
   .vm-badges{ justify-content: center !important; gap: 6px !important; }
   .vm-badge{ font-size: 11px !important; padding: 7px 12px !important; }
 
+  /* FOOTER */
   footer{
     flex-direction: column !important;
     text-align: center !important;
@@ -4778,10 +4836,14 @@ footer{
 
 /* ---- KÜÇÜK MOBİL ---- */
 @media screen and (max-width: 480px){
+  .navbar{ height: 54px !important; }
+  .brand-text{ display: none !important; }
+  .nav-brand{ gap: 0 !important; }
   .hero-title{ font-size: 30px !important; }
   .hero-ticker{ font-size: 16px !important; }
   .hero-desc{ font-size: 13px !important; }
-  .radial89-host{
+  .radial89-host,
+  .orbit-container{
     width: 140px !important;
     height: 140px !important;
   }
