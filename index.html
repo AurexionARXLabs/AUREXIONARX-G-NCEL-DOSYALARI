@@ -4234,64 +4234,42 @@ footer{
 </div>
 
       <div class="wheel-item wi-0">
-    <div class="wi-icon"><svg class="wi-svg wi-sol" viewBox="0 0 32 32" aria-hidden="true">
-  <rect x="7" y="8" width="18" height="4" rx="2"></rect>
-  <rect x="5" y="14" width="18" height="4" rx="2"></rect>
-  <rect x="7" y="20" width="18" height="4" rx="2"></rect>
-</svg></div>
+    <div class="wi-icon">◎</div>
     <div class="wi-name">Solana</div>
 </div>
 
 <div class="wheel-item wi-1">
-    <div class="wi-icon"><svg class="wi-svg wi-ray" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M18 3 7 18h8l-2 11 12-17h-8z"></path>
-</svg></div>
+    <div class="wi-icon">⚡</div>
     <div class="wi-name">Raydium</div>
 </div>
 
 <div class="wheel-item wi-2">
-    <div class="wi-icon"><svg class="wi-svg wi-jup" viewBox="0 0 32 32" aria-hidden="true">
-  <circle cx="16" cy="16" r="10"></circle>
-  <path d="M11 13c3-3 8-3 11 0M10 18c4 3 9 3 13 0"></path>
-</svg></div>
+    <div class="wi-icon">♃</div>
     <div class="wi-name">Jupiter</div>
 </div>
 
 <div class="wheel-item wi-3">
-    <div class="wi-icon"><svg class="wi-svg wi-ork" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M7 18c4-8 12-9 18-3-4 6-12 8-18 3z"></path>
-  <circle cx="21" cy="14" r="1.5"></circle>
-</svg></div>
+    <div class="wi-icon">◯</div>
     <div class="wi-name">Orka</div>
 </div>
 
 <div class="wheel-item wi-4">
-    <div class="wi-icon"><svg class="wi-svg wi-kam" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M9 6v20M22 6 10 16l12 10M14 16l9 0"></path>
-</svg></div>
+    <div class="wi-icon">K</div>
     <div class="wi-name">Kamino</div>
 </div>
 
 <div class="wheel-item wi-5">
-    <div class="wi-icon"><svg class="wi-svg wi-dri" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M16 5 27 25H5z"></path>
-  <path d="M16 12 21 22H11z"></path>
-</svg></div>
+    <div class="wi-icon">△</div>
     <div class="wi-name">Drift</div>
 </div>
 
 <div class="wheel-item wi-6">
-    <div class="wi-icon"><svg class="wi-svg wi-mar" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M6 25V7h5l5 9 5-9h5v18"></path>
-  <path d="M11 25V14l5 8 5-8v11"></path>
-</svg></div>
+    <div class="wi-icon">M</div>
     <div class="wi-name">MarginFi</div>
 </div>
 
 <div class="wheel-item wi-7">
-    <div class="wi-icon"><svg class="wi-svg wi-hel" viewBox="0 0 32 32" aria-hidden="true">
-  <path d="M16 3l3.2 9.4L29 16l-9.8 3.6L16 29l-3.2-9.4L3 16l9.8-3.6z"></path>
-</svg></div>
+    <div class="wi-icon">✦</div>
     <div class="wi-name">Helius</div>
 </div>
   </div>
@@ -4876,76 +4854,14 @@ footer{
 }
 </style>
 
-<style id="ARX_REAL_MOBILE_FIX_03">
-/* =========================================================
-   ARX REAL MOBILE FIX 03
-   Bu blok en sona eklendi. PC tasarımı korunur, 768px altı mobil düzen kilitlenir.
-   Ana düzeltme: #content-scale mobilde iptal edildi.
-========================================================= */
 
-@media screen and (max-width: 768px){
-  html,
-  body{
-    width:100% !important;
-    max-width:100vw !important;
-    overflow-x:hidden !important;
-    overscroll-behavior-x:none !important;
-  }
-
-  body{
-    position:relative !important;
-    background:#050816 !important;
-  }
-
-  body::before{
-    width:100vw !important;
-    height:100vh !important;
-    background-size:cover !important;
-    background-position:center top !important;
-    background-attachment:scroll !important;
-  }
-
-  #content-scale{
-    transform:none !important;
-    width:100% !important;
-    max-width:100vw !important;
-    margin-left:0 !important;
-    padding-top:78px !important;
-    overflow-x:hidden !important;
-  }
-
-  .navbar{
-    position:fixed !important;
-    top:0 !important;
-    left:0 !important;
-    right:0 !important;
-    height:78px !important;
-    min-height:78px !important;
-    padding:0 14px !important;
-    display:flex !important;
-    flex-direction:row !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    gap:8px !important;
-    transform:none !important;
-    background:rgba(3,5,16,.92) !important;
-    border-bottom:1px solid rgba(255,53,93,.28) !important;
-    z-index:10000 !important;
-  }
-
-  .nav-brand{
-    min-width:0 !important;
-    width:auto !important;
-    flex:0 0 auto !important;
-    gap:0 !important;
-  }
-
+<style id="ARX_ONLY_TOP_ROTATING_LOGO_FIX">
+/* SADECE ÜST DÖNEN LOGO DÜZELTME */
+@media screen and (max-width:768px){
   .brand-logo{
-    width:42px !important;
-    height:42px !important;
-    min-width:42px !important;
-    animation:none !important;
-    transform:none !important;
+    display:block !important;
+    animation:spinLogo 7s linear infinite !important;
+    transform-origin:center center !important;
   }
 
   .brand-text,
@@ -4953,411 +4869,16 @@ footer{
     display:none !important;
   }
 
-  .nav-right{
-    min-width:0 !important;
-    width:auto !important;
-    flex:0 0 auto !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:flex-end !important;
-    gap:8px !important;
-  }
-
-  .nav-icon{
-    width:40px !important;
-    height:40px !important;
-    min-width:40px !important;
-    border-radius:50% !important;
-    font-size:14px !important;
-  }
-
-  .buy-btn{
-    height:44px !important;
-    min-height:44px !important;
-    padding:0 18px !important;
-    border-radius:13px !important;
-    font-size:14px !important;
-    letter-spacing:.5px !important;
-    white-space:nowrap !important;
-  }
-
-  .hero{
-    display:block !important;
-    min-height:auto !important;
-    height:auto !important;
-    padding:18px 12px 8px !important;
-    margin:0 !important;
-    overflow:visible !important;
-  }
-
-  .hero-inner{
-    width:100% !important;
-    max-width:100% !important;
-    margin:0 auto !important;
-    padding:0 !important;
-    transform:none !important;
-  }
-
-  /* Mobilde üstteki dönen büyük logo/başlık alanı kapatıldı.
-     Bu, nav altında oluşan büyük siyah boşluğu bitirir. */
   .radial89-host,
-  .orbit-container,
+  .orbit-container{
+    display:flex !important;
+  }
+
   .hero-title,
   .hero-ticker,
   .hero-sub,
   .hero-desc{
     display:none !important;
-  }
-
-  .hero-btns{
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:center !important;
-    gap:10px !important;
-    width:100% !important;
-    margin:0 auto 16px !important;
-    padding:0 !important;
-    position:relative !important;
-    z-index:20 !important;
-  }
-
-  .btn-primary,
-  .btn-secondary{
-    width:220px !important;
-    max-width:calc(100vw - 48px) !important;
-    min-width:0 !important;
-    min-height:50px !important;
-    padding:0 18px !important;
-    border-radius:14px !important;
-    font-size:14px !important;
-    line-height:1.15 !important;
-    letter-spacing:.6px !important;
-  }
-
-  .ecosystem,
-  section.ecosystem{
-    width:100% !important;
-    max-width:100vw !important;
-    display:flex !important;
-    flex-direction:column !important;
-    align-items:center !important;
-    justify-content:flex-start !important;
-    gap:18px !important;
-    padding:10px 10px 18px !important;
-    margin:0 auto !important;
-    transform:none !important;
-    overflow:visible !important;
-  }
-
-  .wheel-wrap{
-    width:min(330px, 86vw) !important;
-    height:min(330px, 86vw) !important;
-    max-width:330px !important;
-    max-height:330px !important;
-    aspect-ratio:1 / 1 !important;
-    margin:0 auto 6px !important;
-    transform:none !important;
-    grid-column:auto !important;
-    overflow:visible !important;
-  }
-
-  .wheel-bg{ inset:0 !important; border-width:2.5px !important; }
-  .wheel-bg2{ inset:28px !important; border-width:2px !important; }
-  .wheel-bg3{ inset:58px !important; border-width:2px !important; }
-
-  .wheel-line{
-    width:43% !important;
-    height:2px !important;
-    opacity:.72 !important;
-  }
-
-  .lightning-ring{
-    inset:-38px !important;
-    width:calc(100% + 76px) !important;
-    height:calc(100% + 76px) !important;
-  }
-
-  .wheel-center{
-    width:108px !important;
-    height:108px !important;
-    border-width:2px !important;
-    box-shadow:
-      0 0 38px rgba(255,53,93,.32),
-      0 0 25px rgba(0,234,255,.20),
-      inset 0 0 22px rgba(255,255,255,.04) !important;
-    animation:none !important;
-  }
-
-  .wheel-center::before{
-    inset:-8px !important;
-    border-width:2px !important;
-  }
-
-  .wheel-center::after{
-    inset:9px !important;
-  }
-
-  .wheel-center img{
-    width:132px !important;
-    height:132px !important;
-    max-width:132px !important;
-    max-height:132px !important;
-    animation:none !important;
-    transform:none !important;
-    object-fit:contain !important;
-  }
-
-  .wheel-item{
-    width:60px !important;
-    height:60px !important;
-    border-width:3px !important;
-    gap:2px !important;
-    padding:4px !important;
-    transform:translate(-50%,-50%) !important;
-  }
-
-  .wheel-item:hover{
-    transform:translate(-50%,-50%) !important;
-  }
-
-  .wi-0{ top:7% !important; left:50% !important; }
-  .wi-1{ top:22% !important; left:80% !important; }
-  .wi-2{ top:51% !important; left:94% !important; }
-  .wi-3{ top:79% !important; left:80% !important; }
-  .wi-4{ top:93% !important; left:50% !important; }
-  .wi-5{ top:79% !important; left:20% !important; }
-  .wi-6{ top:51% !important; left:6% !important; }
-  .wi-7{ top:22% !important; left:20% !important; }
-
-  .wi-icon{
-    width:22px !important;
-    height:22px !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    font-size:0 !important;
-    line-height:1 !important;
-  }
-
-  .wi-svg{
-    width:22px !important;
-    height:22px !important;
-    display:block !important;
-    overflow:visible !important;
-    filter:drop-shadow(0 0 8px rgba(0,234,255,.5)) !important;
-  }
-
-  .wi-svg *{
-    vector-effect:non-scaling-stroke;
-  }
-
-  .wi-sol rect{ fill:#00eaff; filter:drop-shadow(0 0 4px #00eaff); }
-  .wi-ray path{ fill:#ffed4a; filter:drop-shadow(0 0 5px #ff355d); }
-  .wi-jup circle{ fill:none; stroke:#7deeff; stroke-width:2.2; }
-  .wi-jup path{ fill:none; stroke:#fff; stroke-width:1.7; stroke-linecap:round; }
-  .wi-ork path{ fill:none; stroke:#a8f7ff; stroke-width:2.2; stroke-linejoin:round; }
-  .wi-ork circle{ fill:#a8f7ff; }
-  .wi-kam path{ fill:none; stroke:#ffffff; stroke-width:2.6; stroke-linecap:round; stroke-linejoin:round; }
-  .wi-dri path:first-child{ fill:none; stroke:#ffffff; stroke-width:2.2; }
-  .wi-dri path:last-child{ fill:#bd38ff; opacity:.9; }
-  .wi-mar path{ fill:none; stroke:#ffffff; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
-  .wi-hel path{ fill:#ffffff; filter:drop-shadow(0 0 6px #ffffff); }
-
-  .wi-name{
-    max-width:54px !important;
-    font-size:9.5px !important;
-    line-height:1.05 !important;
-    white-space:normal !important;
-    text-align:center !important;
-    letter-spacing:-.2px !important;
-  }
-
-  .eco-right{
-    width:min(560px, 100%) !important;
-    max-width:100% !important;
-    display:grid !important;
-    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
-    gap:12px !important;
-    padding:0 !important;
-    margin:2px auto 0 !important;
-    transform:none !important;
-    grid-column:auto !important;
-    position:relative !important;
-  }
-
-  .value-card{
-    min-width:0 !important;
-    min-height:106px !important;
-    display:grid !important;
-    grid-template-columns:42px minmax(0, 1fr) !important;
-    align-items:center !important;
-    gap:9px !important;
-    padding:12px 9px !important;
-    border-radius:17px !important;
-    overflow:hidden !important;
-    transform:none !important;
-  }
-
-  .value-card:hover{
-    transform:none !important;
-  }
-
-  .value-icon{
-    width:40px !important;
-    height:40px !important;
-    min-width:40px !important;
-    border-radius:50% !important;
-    font-size:28px !important;
-  }
-
-  .value-card > div:last-child{
-    min-width:0 !important;
-    width:100% !important;
-  }
-
-  .value-name{
-    font-size:13px !important;
-    line-height:1.05 !important;
-    letter-spacing:.8px !important;
-    white-space:normal !important;
-    overflow-wrap:anywhere !important;
-    margin:0 0 6px !important;
-    text-align:left !important;
-  }
-
-  .value-desc{
-    font-size:11.5px !important;
-    line-height:1.28 !important;
-    font-weight:800 !important;
-    max-width:none !important;
-    text-align:left !important;
-  }
-
-  .stats-bar{
-    width:calc(100% - 20px) !important;
-    max-width:560px !important;
-    display:grid !important;
-    grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
-    gap:10px !important;
-    margin:10px auto 32px !important;
-    padding:10px !important;
-    border-radius:20px !important;
-    overflow:visible !important;
-  }
-
-  .stat-item{
-    min-width:0 !important;
-    min-height:82px !important;
-    padding:12px 10px !important;
-    border-radius:15px !important;
-    background:rgba(4,7,20,.52) !important;
-    gap:9px !important;
-  }
-
-  .stat-item::after{
-    display:none !important;
-  }
-
-  .stat-icon{
-    width:40px !important;
-    height:40px !important;
-    min-width:40px !important;
-    font-size:18px !important;
-  }
-
-  .stat-value{
-    font-size:18px !important;
-    line-height:1.05 !important;
-    white-space:nowrap !important;
-  }
-
-  .stat-label{
-    font-size:10.5px !important;
-    line-height:1.15 !important;
-    letter-spacing:.7px !important;
-  }
-}
-
-@media screen and (max-width: 390px){
-  #content-scale{
-    padding-top:74px !important;
-  }
-
-  .navbar{
-    height:74px !important;
-    min-height:74px !important;
-    padding:0 10px !important;
-  }
-
-  .brand-logo{
-    width:38px !important;
-    height:38px !important;
-    min-width:38px !important;
-  }
-
-  .nav-right{
-    gap:6px !important;
-  }
-
-  .nav-icon{
-    width:36px !important;
-    height:36px !important;
-    min-width:36px !important;
-  }
-
-  .buy-btn{
-    height:40px !important;
-    min-height:40px !important;
-    padding:0 14px !important;
-    font-size:13px !important;
-  }
-
-  .btn-primary,
-  .btn-secondary{
-    width:210px !important;
-    min-height:48px !important;
-  }
-
-  .wheel-wrap{
-    width:min(310px, 84vw) !important;
-    height:min(310px, 84vw) !important;
-  }
-
-  .wheel-item{
-    width:56px !important;
-    height:56px !important;
-  }
-
-  .wi-name{
-    font-size:9px !important;
-  }
-
-  .eco-right{
-    gap:10px !important;
-  }
-
-  .value-card{
-    min-height:98px !important;
-    grid-template-columns:38px minmax(0, 1fr) !important;
-    gap:8px !important;
-    padding:10px 8px !important;
-  }
-
-  .value-icon{
-    width:36px !important;
-    height:36px !important;
-    min-width:36px !important;
-    font-size:24px !important;
-  }
-
-  .value-name{
-    font-size:12px !important;
-    letter-spacing:.5px !important;
-  }
-
-  .value-desc{
-    font-size:10.5px !important;
   }
 }
 </style>
