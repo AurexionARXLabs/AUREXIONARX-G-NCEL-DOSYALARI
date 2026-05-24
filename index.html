@@ -4706,51 +4706,94 @@ footer{
 
   /* HERO */
   .hero{
-    padding: 80px 14px 10px !important;
+    padding: 80px 14px 20px !important;
     min-height: auto !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
   }
-  .hero-inner{ margin-top: 0 !important; }
-  .hero-title{ font-size: 36px !important; letter-spacing: 2px !important; }
-  .hero-ticker{ font-size: 18px !important; letter-spacing: 5px !important; }
-  .hero-sub{ font-size: 13px !important; letter-spacing: 2px !important; }
-  .hero-desc{ font-size: 14px !important; line-height: 1.5 !important; padding: 0 8px !important; }
+  .hero-inner{
+    margin-top: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .hero-title{
+    font-size: 42px !important;
+    letter-spacing: 3px !important;
+    margin: 0 0 6px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  .hero-ticker{
+    font-size: 20px !important;
+    letter-spacing: 6px !important;
+    margin: 0 0 14px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  .hero-ticker::before,
+  .hero-ticker::after{ width: 30px !important; }
+  .hero-sub{
+    font-size: 14px !important;
+    letter-spacing: 2px !important;
+    margin: 0 0 14px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  .hero-desc{
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    padding: 0 8px !important;
+    margin: 0 0 18px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
   .hero-btns{
     flex-direction: column !important;
     gap: 10px !important;
-    margin-top: 20px !important;
+    margin-top: 6px !important;
     position: relative !important;
     z-index: 10 !important;
+    width: 100% !important;
+    align-items: center !important;
   }
   .btn-primary, .btn-secondary{
-    width: 75% !important;
+    width: 80% !important;
+    max-width: 320px !important;
     font-size: 13px !important;
-    padding: 11px 18px !important;
+    padding: 12px 18px !important;
   }
 
-  /* RADIAL/ORBIT — HERO ALTINA NORMAL POZİSYONDA */
-  .radial89-host{
-    width: 160px !important;
-    height: 160px !important;
-    top: 0 !important;
-    position: relative !important;
-    margin: 20px auto 0 !important;
+  /* RADIAL/ORBIT — MOBİLDE TAMAMEN GİZLE (yer israfı) */
+  .radial89-host,
+  .orbit-container.radial89-host{
+    display: none !important;
   }
   .orbit-container{
-    width: 160px !important;
-    height: 160px !important;
-    top: 0 !important;
-    position: relative !important;
-    margin: 20px auto 0 !important;
-    transform: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* WHEEL */
+  /* WHEEL — MERKEZ LOGO KÜÇÜK OLSUN */
   .wheel-wrap{
-    width: min(340px, 88vw) !important;
+    width: min(330px, 88vw) !important;
   }
   .wheel-item{ width: 58px !important; height: 58px !important; }
   .wi-icon{ font-size: 14px !important; }
   .wi-name{ font-size: 10px !important; }
+  .wheel-center{
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .wheel-center img{
+    width: 70px !important;
+    height: 70px !important;
+  }
 
   /* VALUE CARDS (4 küçük kart) */
   .value-card{ padding: 12px 10px !important; min-height: auto !important; }
