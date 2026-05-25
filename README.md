@@ -25,7 +25,7 @@ AUREXION is a community-driven Solana ecosystem token built on transparency, tru
 - ✅ Liquidity locked
 
 ## Official Website
-https://aurexion-sigma.vercel.app
+https://aurexion-nine.vercel.app
 
 ## Buy ARX
 https://pump.fun/coin/Hq6cJZpLJQymfafR4TYf1NHeiZCoup7zzczVUZbRpump
