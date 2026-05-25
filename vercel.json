@@ -1,11 +1,3 @@
 {
-  "version": 2,
-  "functions": {
-    "api/token.js": {
-      "runtime": "@vercel/node@3"
-    }
-  },
-  "rewrites": [
-    { "source": "/api/token", "destination": "/api/token.js" }
-  ]
+  "version": 2
 }
