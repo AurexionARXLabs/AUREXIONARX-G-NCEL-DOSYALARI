@@ -39,7 +39,8 @@
   <link rel="icon" type="image/png" href="logo.png">
   <meta property="og:image:alt" content="AUREXION ARX logo">
   <meta name="twitter:image:alt" content="AUREXION ARX logo">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.dexscreener.com;">
+  <!-- CSP kaldırıldı: API çağrılarını engellemekteydi -->
+
 
   
   <style>
@@ -4440,8 +4441,8 @@ footer{
           <li class="cnew-row">
             <div class="cnew-icon"><span class="ico-emoji">👥</span></div>
             <div class="cnew-text">
-              <p class="cnew-label">Telegram • X • Discord</p>
-              <p class="cnew-desc">Coming Soon 🚀</p>
+              <p class="cnew-label">Telegram • X</p>
+              <p class="cnew-desc">Discord: Coming Soon 🚀</p>
             </div>
           </li>
           <li class="cnew-row">
@@ -4597,6 +4598,94 @@ footer{
         bar.style.width = percent + "%";
       }
     });
+
+    // ============================================
+    // CANLI VERİ ÇEKME — DEXSCREENER API
+    // ============================================
+    const ARX_TOKEN_ADDRESS = "Hq6cJZpLJQymfafR4TYf1NHeiZCoup7zzczVUZbRpump";
+
+    function formatNumber(num) {
+      if (num === null || num === undefined || isNaN(num)) return "$0";
+      if (num >= 1_000_000_000) return "$" + (num / 1_000_000_000).toFixed(2) + "B";
+      if (num >= 1_000_000)     return "$" + (num / 1_000_000).toFixed(2) + "M";
+      if (num >= 1_000)         return "$" + (num / 1_000).toFixed(2) + "K";
+      if (num >= 1)             return "$" + num.toFixed(2);
+      // küçük fiyatlar için daha fazla decimal
+      return "$" + num.toFixed(8).replace(/0+$/, "").replace(/\.$/, "");
+    }
+
+    function formatPrice(price) {
+      if (price === null || price === undefined || isNaN(price)) return "$0";
+      const n = parseFloat(price);
+      if (n >= 1) return "$" + n.toFixed(4);
+      if (n >= 0.01) return "$" + n.toFixed(6);
+      return "$" + n.toFixed(9).replace(/0+$/, "").replace(/\.$/, "");
+    }
+
+    async function fetchTokenData() {
+      // 1. DENEME: Vercel API route (kendi sunucumuz - en güvenilir, hiçbir CORS/ISP engeli yok)
+      try {
+        const res = await fetch("/api/token");
+        if (res.ok) {
+          const data = await res.json();
+          if (data && (data.priceUsd || data.marketCap)) {
+            updateStats({
+              price: data.priceUsd,
+              marketCap: data.marketCap,
+              volume: data.volume,
+              liquidity: data.liquidity
+            });
+            console.log("✓ ARX live data updated (Vercel API)", data);
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn("Vercel /api/token failed:", err.message);
+      }
+
+      // 2. DENEME: Dexscreener direkt
+      try {
+        const url = "https://api.dexscreener.com/latest/dex/tokens/" + ARX_TOKEN_ADDRESS;
+        const res = await fetch(url);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.pairs && data.pairs.length > 0) {
+            const pair = data.pairs.sort((a, b) => 
+              (b.liquidity?.usd || 0) - (a.liquidity?.usd || 0)
+            )[0];
+            updateStats({
+              price: pair.priceUsd,
+              marketCap: pair.marketCap || pair.fdv,
+              volume: pair.volume?.h24,
+              liquidity: pair.liquidity?.usd
+            });
+            console.log("✓ ARX live data updated (Dexscreener direct)", pair);
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn("Dexscreener direct failed:", err.message);
+      }
+
+      console.error("❌ Hiçbir veri kaynağı çalışmadı. /api/token dosyasını eklemen gerek (rehberi soruyorum sana).");
+    }
+
+    function updateStats(s) {
+      const priceEl     = document.getElementById("price");
+      const mcapEl      = document.getElementById("marketcap");
+      const volumeEl    = document.getElementById("volume");
+      const liquidityEl = document.getElementById("liquidity");
+
+      if (priceEl && s.price !== null && s.price !== undefined)         priceEl.textContent = formatPrice(s.price);
+      if (mcapEl && s.marketCap !== null && s.marketCap !== undefined)  mcapEl.textContent = formatNumber(s.marketCap);
+      if (volumeEl && s.volume !== null && s.volume !== undefined)      volumeEl.textContent = formatNumber(s.volume);
+      if (liquidityEl && s.liquidity !== null && s.liquidity !== undefined) liquidityEl.textContent = formatNumber(s.liquidity);
+    }
+
+    // Sayfa yüklenince çek
+    fetchTokenData();
+    // Her 30 saniyede bir güncelle
+    setInterval(fetchTokenData, 30_000);
   </script>
 </div><!-- /content-scale -->
 
